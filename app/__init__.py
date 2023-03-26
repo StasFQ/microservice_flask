@@ -8,6 +8,7 @@ from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 import os
 from flask_mail import Mail
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -47,3 +48,4 @@ if not app.debug:
 
 
 mail = Mail(app)
+bootstrap = Bootstrap(app)
